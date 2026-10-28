@@ -1,0 +1,62 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -112,
+        -96
+      ],
+      "id": "670311e7-7162-4265-8696-4d35dfb88568",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "resource": "audio",
+        "operation": "analyze",
+        "modelId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1.2,
+      "position": [
+        96,
+        -32
+      ],
+      "id": "d6bfd5fe-1b2f-40c3-9bd5-e6d96a8d36e1",
+      "name": "Analyze audio"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Analyze audio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "3a9d462e-38f6-464c-91d8-b38ee34dd036",
+  "meta": {
+    "instanceId": "2595d86e6392c7c111005d07ff1e75dec99668c8ba8a89515f1c8cc89104546b"
+  },
+  "nodeGroups": [],
+  "id": "auSe0u3owKxoZuLK",
+  "tags": []
+}
